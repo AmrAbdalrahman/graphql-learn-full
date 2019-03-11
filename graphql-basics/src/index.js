@@ -36,6 +36,27 @@ const posts = [{
     author: '2'
 }]
 
+const comments = [{
+    id: '102',
+    text: 'This worked well for me. Thanks!',
+    author: '3',
+    post: '10'
+}, {
+    id: '103',
+    text: 'Glad you enjoyed it.',
+    author: '1',
+    post: '10'
+}, {
+    id: '104',
+    text: 'This did no work.',
+    author: '2',
+    post: '11'
+}, {
+    id: '105',
+    text: 'Nevermind. I got it to work.',
+    author: '1',
+    post: '11'
+}]
 
 //Type definition (schema)
 const typeDefs = `
@@ -96,13 +117,15 @@ const resolvers = {
                 return isTitleMatch || isBodyMatch
             })
         },
+        comments(parent, args, ctx, info) {
+            return comments
+        },
         me() {
-           return {
-               id: '123',
-               name: 'amr',
-               email: 'ass@fr.com',
-               age: 25
-           }
+            return {
+                id: '123098',
+                name: 'Mike',
+                email: 'mike@example.com'
+            }
         },
         post() {
             return {
