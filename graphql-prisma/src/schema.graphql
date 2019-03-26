@@ -67,7 +67,6 @@ type User {
     id: ID!
     name: String!
     email: String!
-    age: Int
     posts: [Post!]!
     comments: [Comment!]!
 }
@@ -102,5 +101,5 @@ type PostSubscriptionPayload {
 
 type CommentSubscriptionPayload {
     mutation: MutationType!
-    data: Comment!
+    node: Comment!
 }

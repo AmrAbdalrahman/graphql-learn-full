@@ -1,5 +1,5 @@
 const User = {
-    posts(parent, args, { db }, info) {
+    /*posts(parent, args, { prisma }, info) {
         return db.posts.filter((post) => {
             return post.author === parent.id
         })
@@ -8,7 +8,7 @@ const User = {
         return db.comments.filter((comment) => {
             return comment.author === parent.id
         })
-    }
+    }*/
 }
 
 export { User as default }

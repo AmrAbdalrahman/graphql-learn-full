@@ -2,10 +2,13 @@ import {Prisma} from 'prisma-binding';
 
 const prisma = new Prisma({
     typeDefs: 'src/generated/prisma.graphql',
-    endpoint: 'https://eu1.prisma.sh/amr-ahmed-00564b/graphql-prisma/dev'
+    endpoint: 'https://eu1.prisma.sh/amr-ahmed-00564b/graphql-prisma/dev',
+    secret: 'magicanosecrettest'
 });
 
 // prisma.query prisma.mutation prisma.subscription prisma.exists
+
+export {prisma as default}
 
 const createPostForUser = async (authorId, data) => {
     const userExists = await prisma.exists.User({ id: authorId })
@@ -49,6 +52,7 @@ const updatePostForUser = async (postId, data) => {
     const post = await prisma.mutation.updatePost({
         where: {
             id: postId
+
         },
         data
     }, '{ author { id name email posts { id title published } } }')

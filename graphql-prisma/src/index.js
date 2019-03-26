@@ -6,7 +6,7 @@ import Subscription from './resolvers/Subscription';
 import User from './resolvers/User'
 import Post from './resolvers/Post'
 import Comment from './resolvers/Comment'
-import './prisma'
+import prisma from './prisma'
 /*
 const fs = require('fs');
 const typeDefs = fs.readFileSync('./src/schema.graphqls','utf8');
@@ -26,7 +26,8 @@ const server = new GraphQLServer({
     },
     context: {
         db,
-        pubsub
+        pubsub,
+        prisma
     }
 });
 
