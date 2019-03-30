@@ -18,6 +18,28 @@ const Mutation = {
             token: generateToken(user.id)
         }
     },
+    async login(parent, args, { prisma }, info) {
+        const user = await prisma.query.user({
+            where: {
+                email: args.data.email
+            }
+        })
+
+        if (!user) {
+            throw new Error('Unable to login')
+        }
+
+        const isMatch = await bcrypt.compare(args.data.password, user.password)
+
+        if (!isMatch) {
+            throw new Error('Unable to login')
+        }
+
+        return {
+            user,
+            token: generateToken(user.id)
+        }
+    },
     deleteUser(parent, args, {db}, info) {
         const userIndex = db.users.findIndex((user) => user.id === args.id)
 
@@ -68,30 +90,21 @@ const Mutation = {
 
         return user
     },
-    createPost(parent, args, {db, pubsub}, info) {
-        const userExists = db.users.some((user) => user.id === args.data.author)
+    createPost(parent, args, { prisma, request }, info) {
+        const userId = getUserId(request)
 
-        if (!userExists) {
-            throw new Error('User not found')
-        }
-
-        const post = {
-            id: uuidv4(),
-            ...args.data
-        }
-
-        db.posts.push(post);
-
-        if (args.data.published) {
-            pubsub.publish('post', {
-                post: {
-                    mutation: 'CREATED',
-                    data: post
+        return prisma.mutation.createPost({
+            data: {
+                title: args.data.title,
+                body: args.data.body,
+                published: args.data.published,
+                author: {
+                    connect: {
+                        id: userId
+                    }
                 }
-            })
-        }
-
-        return post
+            }
+        }, info)
     },
     deletePost(parent, args, {db, pubsub}, info) {
         const postIndex = db.posts.findIndex((post) => post.id === args.id)

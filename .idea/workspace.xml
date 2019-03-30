@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d327f0c9-d1dd-4ca7-99b9-6e357439418c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/graphql-prisma/src/utils/generateToken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphql-prisma/src/utils/getUserId.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphql-prisma/src/utils/hashPassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-prisma/.graphqlconfig" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-prisma/.graphqlconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-prisma/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-prisma/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-prisma/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-prisma/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-prisma/prisma/datamodel.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-prisma/prisma/datamodel.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-prisma/prisma/prisma.yml" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-prisma/prisma/prisma.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql-prisma/src/generated/prisma.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-prisma/src/generated/prisma.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphql-prisma/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-prisma/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graphql-prisma/src/resolvers/Mutation.js" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-prisma/src/resolvers/Mutation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graphql-prisma/src/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/graphql-prisma/src/schema.graphql" afterDir="false" />
     </list>
@@ -27,22 +18,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/graphql-prisma/src/schema.graphql">
+        <entry file="file://$PROJECT_DIR$/graphql-prisma/src/resolvers/Mutation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+              <caret line="101" column="30" lean-forward="true" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graphql-prisma/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/graphql-prisma/src/resolvers/Mutation.js">
+        <entry file="file://$PROJECT_DIR$/graphql-prisma/src/utils/getUserId.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="7" column="58" lean-forward="true" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -140,7 +143,6 @@
         <option value="$PROJECT_DIR$/graphql-prisma/prisma/docker-compose.yml" />
         <option value="$PROJECT_DIR$/graphql-prisma/src/generated/prisma.graphql" />
         <option value="$PROJECT_DIR$/graphql-prisma/package.json" />
-        <option value="$PROJECT_DIR$/graphql-prisma/src/index.js" />
         <option value="$PROJECT_DIR$/graphql-prisma/prisma-review-website/datamodel.prisma" />
         <option value="$PROJECT_DIR$/graphql-prisma/prisma-review-website/prisma.yml" />
         <option value="$PROJECT_DIR$/graphql-prisma/src/resolvers/User.js" />
@@ -153,14 +155,15 @@
         <option value="$PROJECT_DIR$/graphql-prisma/prisma/datamodel.prisma" />
         <option value="$PROJECT_DIR$/graphql-prisma/.graphqlconfig" />
         <option value="$PROJECT_DIR$/graphql-prisma/src/utils/hashPassword.js" />
-        <option value="$PROJECT_DIR$/graphql-prisma/src/resolvers/Mutation.js" />
         <option value="$PROJECT_DIR$/graphql-prisma/src/schema.graphql" />
+        <option value="$PROJECT_DIR$/graphql-prisma/src/index.js" />
+        <option value="$PROJECT_DIR$/graphql-prisma/src/resolvers/Mutation.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="300" />
-    <option name="y" value="42" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="574" />
+    <option name="y" value="79" />
     <option name="width" value="815" />
     <option name="height" value="754" />
   </component>
@@ -202,6 +205,13 @@
               <item name="graphql-prisma" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resolvers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graphql-course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graphql-course" type="462c0819:PsiDirectoryNode" />
+              <item name="graphql-prisma" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -298,22 +308,22 @@
       <workItem from="1553536595263" duration="9458000" />
       <workItem from="1553623302871" duration="7776000" />
       <workItem from="1553934339667" duration="1511000" />
-      <workItem from="1553936530641" duration="4714000" />
+      <workItem from="1553936530641" duration="6870000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66921000" />
+    <option name="totallyTimeSpent" value="69077000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="22" width="1382" height="754" extended-state="6" />
+    <frame x="574" y="79" width="815" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16815476" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.2908623" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="GraphQL" order="0" weight="0.3268921" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.2447665" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.2447665" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32905295" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
@@ -431,16 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graphql-prisma/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graphql-basics/src/resolvers/User.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -544,24 +544,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graphql-prisma/src/utils/getUserId.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graphql-prisma/src/utils/hashPassword.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphql-prisma/src/schema.graphql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -601,13 +587,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/graphql-prisma/src/schema.graphql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/graphql-prisma/src/resolvers/Mutation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        <state relative-caret-position="238">
+          <caret line="101" column="30" lean-forward="true" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphql-prisma/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphql-prisma/src/utils/getUserId.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="58" lean-forward="true" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
         </state>
       </provider>
     </entry>
