@@ -1,24 +1,22 @@
-import uuidv4 from 'uuid/v4'
+import bcrypt from 'bcryptjs';
+import getUserId from '../utils/getUserId'
+import generateToken from '../utils/generateToken'
+import hashPassword from '../utils/hashPassword'
 
 const Mutation = {
-    createUser(parent, args, {db}, info) {
+    async createUser(parent, args, { prisma }, info) {
+        const password = await hashPassword(args.data.password)
+        const user = await prisma.mutation.createUser({
+            data: {
+                ...args.data,
+                password
+            }
+        })
 
-
-
-       /* const emailTaken = db.users.some((user) => user.email === args.data.email)
-
-        if (emailTaken) {
-            throw new Error('Email taken')
+        return {
+            user,
+            token: generateToken(user.id)
         }
-
-        const user = {
-            id: uuidv4(),
-            ...args.data
-        }
-
-        db.users.push(user)
-
-        return user*/
     },
     deleteUser(parent, args, {db}, info) {
         const userIndex = db.users.findIndex((user) => user.id === args.id)
@@ -208,7 +206,7 @@ const Mutation = {
 
         return [deletedComment]
     },
-    updateComment(parent, args, {db,pubsub}, info) {
+    updateComment(parent, args, {db, pubsub}, info) {
         const {id, data} = args
         const comment = db.comments.find((comment) => comment.id === id)
 
