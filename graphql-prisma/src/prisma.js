@@ -1,9 +1,11 @@
 import {Prisma} from 'prisma-binding';
+import { fragmentReplacements } from './resolvers/index'
 
 const prisma = new Prisma({
     typeDefs: 'src/generated/prisma.graphql',
     endpoint: 'https://eu1.prisma.sh/amr-ahmed-00564b/graphql-prisma/dev',
-    secret: 'magicanosecrettest'
+    secret: 'magicanosecrettest',
+    fragmentReplacements
 });
 
 // prisma.query prisma.mutation prisma.subscription prisma.exists
